@@ -1,0 +1,1165 @@
+export interface Flower {
+  id: string;
+  name: string;
+  category: string;
+  image: string;
+  colors: string[];
+  description: string;
+  care: {
+    temperature: string;
+    humidity: string;
+    sunlight: string;
+    watering: string;
+    soil: string;
+    fertilizer: string;
+  };
+  bloomTime: string;
+  difficulty: 'Easy' | 'Medium' | 'Hard';
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  flowerCount: number;
+}
+
+export const categories: Category[] = [
+  {
+    id: 'roses',
+    name: 'Roses',
+    description: 'Classic and romantic flowers symbolizing love and beauty',
+    image: 'https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=800',
+    flowerCount: 12
+  },
+  {
+    id: 'tulips',
+    name: 'Tulips',
+    description: 'Elegant spring flowers with vibrant colors and graceful forms',
+    image: 'https://images.pexels.com/photos/36729/tulip-flower-bloom-pink.jpg?auto=compress&cs=tinysrgb&w=800',
+    flowerCount: 10
+  },
+  {
+    id: 'sunflowers',
+    name: 'Sunflowers',
+    description: 'Bright and cheerful flowers that follow the sun',
+    image: 'https://images.pexels.com/photos/1169084/pexels-photo-1169084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    flowerCount: 8
+  },
+  {
+    id: 'orchids',
+    name: 'Orchids',
+    description: 'Exotic and sophisticated flowers with intricate patterns',
+    image: 'https://images.pexels.com/photos/2750067/pexels-photo-2750067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    flowerCount: 11
+  },
+  {
+    id: 'daisies',
+    name: 'Daisies',
+    description: 'Simple yet beautiful flowers representing innocence and purity',
+    image: 'https://images.pexels.com/photos/8468848/pexels-photo-8468848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    flowerCount: 9
+  },
+  {
+    id: 'lilies',
+    name: 'Lilies',
+    description: 'Elegant and fragrant flowers with distinctive trumpet shapes',
+    image: 'https://images.pexels.com/photos/17555896/pexels-photo-17555896/free-photo-of-white-blooming-lily-surrounded-by-buds.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    flowerCount: 10
+  }
+];
+
+export const flowers: Flower[] = [
+  // Roses (12 varieties)
+  {
+    id: 'red-rose',
+    name: 'Red Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Deep Red', 'Crimson', 'Burgundy'],
+    description: 'The classic symbol of love and passion, red roses are the most popular choice for romantic occasions.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Deep weekly watering, soil should dry between waterings',
+      soil: 'Well-draining, fertile soil with pH 6.0-7.0',
+      fertilizer: 'Monthly during growing season with balanced fertilizer'
+    },
+    bloomTime: 'Late spring to fall',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'white-rose',
+    name: 'White Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/133464/pexels-photo-133464.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Pure White', 'Cream', 'Ivory'],
+    description: 'White roses symbolize purity, innocence, and new beginnings, perfect for weddings and celebrations.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Deep weekly watering, avoid overhead watering',
+      soil: 'Well-draining, organic-rich soil',
+      fertilizer: 'Regular feeding with rose-specific fertilizer'
+    },
+    bloomTime: 'Spring through fall',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'pink-rose',
+    name: 'Pink Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Light Pink', 'Hot Pink', 'Coral Pink'],
+    description: 'Pink roses represent gratitude, grace, and admiration, making them perfect for expressing appreciation.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Weekly deep watering at soil level',
+      soil: 'Well-draining soil with good organic content',
+      fertilizer: 'Monthly feeding during active growth'
+    },
+    bloomTime: 'Late spring to early fall',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'yellow-rose',
+    name: 'Yellow Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Bright Yellow', 'Golden Yellow', 'Lemon Yellow'],
+    description: 'Yellow roses symbolize friendship, joy, and warmth, perfect for celebrating friendships and achievements.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Deep weekly watering, good drainage essential',
+      soil: 'Well-draining, fertile soil with compost',
+      fertilizer: 'Balanced fertilizer every 4-6 weeks'
+    },
+    bloomTime: 'Spring to fall',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'orange-rose',
+    name: 'Orange Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Bright Orange', 'Coral Orange', 'Peach'],
+    description: 'Orange roses represent enthusiasm, passion, and energy, making them perfect for vibrant garden displays.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Regular deep watering, mulch around base',
+      soil: 'Rich, well-draining soil with organic matter',
+      fertilizer: 'Rose fertilizer monthly during growing season'
+    },
+    bloomTime: 'Late spring through fall',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'purple-rose',
+    name: 'Purple Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Deep Purple', 'Lavender', 'Mauve'],
+    description: 'Purple roses symbolize enchantment and mystery, adding an exotic touch to any garden.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Deep weekly watering, avoid wet foliage',
+      soil: 'Well-draining, slightly acidic soil',
+      fertilizer: 'Organic rose fertilizer monthly'
+    },
+    bloomTime: 'Spring to fall',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'climbing-rose',
+    name: 'Climbing Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Pink', 'Red', 'White', 'Yellow'],
+    description: 'Climbing roses create stunning vertical displays on walls, fences, and trellises.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Deep watering twice weekly, good air circulation',
+      soil: 'Rich, well-draining soil with support structure',
+      fertilizer: 'Heavy feeding during growing season'
+    },
+    bloomTime: 'Spring through fall',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'miniature-rose',
+    name: 'Miniature Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['All colors available'],
+    description: 'Compact roses perfect for containers, borders, and small spaces with full-sized beauty.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Regular watering, don\'t let soil dry completely',
+      soil: 'Well-draining potting mix or garden soil',
+      fertilizer: 'Light feeding every 2-3 weeks'
+    },
+    bloomTime: 'Spring through fall',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'hybrid-tea-rose',
+    name: 'Hybrid Tea Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['All classic rose colors'],
+    description: 'The classic long-stemmed roses with large, elegant blooms perfect for cutting.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Deep weekly watering at base of plant',
+      soil: 'Rich, well-draining soil with good organic content',
+      fertilizer: 'Regular feeding with rose-specific fertilizer'
+    },
+    bloomTime: 'Spring through fall',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'garden-rose',
+    name: 'Garden Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/133464/pexels-photo-133464.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Mixed varieties'],
+    description: 'Hardy, disease-resistant roses that bloom repeatedly throughout the growing season.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Weekly deep watering, drought tolerant once established',
+      soil: 'Adaptable to various soil types, prefers well-draining',
+      fertilizer: 'Moderate feeding, very low maintenance'
+    },
+    bloomTime: 'Spring through fall',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'antique-rose',
+    name: 'Antique Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Soft pastels', 'Deep vintage colors'],
+    description: 'Heritage roses with old-world charm, intense fragrance, and romantic appeal.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Deep weekly watering, very drought tolerant',
+      soil: 'Well-draining soil, tolerates poor conditions',
+      fertilizer: 'Light feeding, very hardy and low maintenance'
+    },
+    bloomTime: 'Spring to early summer',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'floribunda-rose',
+    name: 'Floribunda Rose',
+    category: 'roses',
+    image: 'https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Wide variety of colors'],
+    description: 'Clusters of smaller blooms that provide continuous color throughout the season.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours direct sunlight',
+      watering: 'Regular watering, good for mass plantings',
+      soil: 'Well-draining, fertile soil',
+      fertilizer: 'Regular feeding during growing season'
+    },
+    bloomTime: 'Spring through fall',
+    difficulty: 'Medium'
+  },
+
+  // Tulips (10 varieties)
+  {
+    id: 'red-tulip',
+    name: 'Red Tulip',
+    category: 'tulips',
+    image: 'https://images.pexels.com/photos/305854/pexels-photo-305854.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Bright Red', 'Deep Red', 'Cherry Red'],
+    description: 'Bold and vibrant red tulips are perfect for making a dramatic statement in spring gardens.',
+    care: {
+      temperature: '60-65°F (15-18°C) when blooming',
+      humidity: '50-70%',
+      sunlight: '4-6 hours direct sunlight',
+      watering: 'Moderate watering, avoid overwatering',
+      soil: 'Well-draining, slightly alkaline soil',
+      fertilizer: 'Bulb fertilizer at planting time'
+    },
+    bloomTime: 'Early to mid-spring',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'yellow-tulip',
+    name: 'Yellow Tulip',
+    category: 'tulips',
+    image: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Bright Yellow', 'Golden Yellow', 'Lemon Yellow'],
+    description: 'Cheerful yellow tulips bring sunshine to any garden and symbolize happiness and hope.',
+    care: {
+      temperature: '60-65°F (15-18°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours direct sunlight',
+      watering: 'Regular watering during growth, reduce after blooming',
+      soil: 'Well-draining soil with good drainage',
+      fertilizer: 'Low nitrogen fertilizer in spring'
+    },
+    bloomTime: 'Mid-spring',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'pink-tulip',
+    name: 'Pink Tulip',
+    category: 'tulips',
+    image: 'https://images.pexels.com/photos/36729/tulip-flower-bloom-pink.jpg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Light Pink', 'Hot Pink', 'Rose Pink'],
+    description: 'Delicate pink tulips add a soft, romantic touch to spring flower beds and arrangements.',
+    care: {
+      temperature: '60-65°F (15-18°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours direct sunlight',
+      watering: 'Moderate watering, good drainage essential',
+      soil: 'Well-draining, fertile soil',
+      fertilizer: 'Bulb fertilizer at planting'
+    },
+    bloomTime: 'Mid-spring',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'white-tulip',
+    name: 'White Tulip',
+    category: 'tulips',
+    image: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Pure White', 'Cream White'],
+    description: 'Elegant white tulips symbolize forgiveness and purity, perfect for formal gardens.',
+    care: {
+      temperature: '60-65°F (15-18°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours direct sunlight',
+      watering: 'Regular watering during active growth',
+      soil: 'Well-draining, slightly alkaline soil',
+      fertilizer: 'Balanced bulb fertilizer'
+    },
+    bloomTime: 'Early to mid-spring',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'purple-tulip',
+    name: 'Purple Tulip',
+    category: 'tulips',
+    image: 'https://images.pexels.com/photos/305854/pexels-photo-305854.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Deep Purple', 'Lavender', 'Royal Purple'],
+    description: 'Regal purple tulips add sophistication and elegance to any spring display.',
+    care: {
+      temperature: '60-65°F (15-18°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours direct sunlight',
+      watering: 'Moderate watering, avoid waterlogged soil',
+      soil: 'Well-draining soil with organic matter',
+      fertilizer: 'Low nitrogen fertilizer in early spring'
+    },
+    bloomTime: 'Mid-spring',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'orange-tulip',
+    name: 'Orange Tulip',
+    category: 'tulips',
+    image: 'https://images.pexels.com/photos/36729/tulip-flower-bloom-pink.jpg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Bright Orange', 'Coral Orange'],
+    description: 'Vibrant orange tulips create stunning focal points and complement other spring colors beautifully.',
+    care: {
+      temperature: '60-65°F (15-18°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours direct sunlight',
+      watering: 'Regular watering during growth period',
+      soil: 'Well-draining, fertile garden soil',
+      fertilizer: 'Bulb fertilizer at planting time'
+    },
+    bloomTime: 'Mid-spring',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'black-tulip',
+    name: 'Black Tulip',
+    category: 'tulips',
+    image: 'https://images.pexels.com/photos/305854/pexels-photo-305854.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Deep Maroon', 'Dark Purple-Black'],
+    description: 'Dramatic black tulips are rare and exotic, creating striking contrasts in garden designs.',
+    care: {
+      temperature: '60-65°F (15-18°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours direct sunlight',
+      watering: 'Careful watering, excellent drainage required',
+      soil: 'Well-draining, rich soil',
+      fertilizer: 'Quality bulb fertilizer'
+    },
+    bloomTime: 'Late spring',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'parrot-tulip',
+    name: 'Parrot Tulip',
+    category: 'tulips',
+    image: 'https://images.pexels.com/photos/36729/tulip-flower-bloom-pink.jpg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Mixed vibrant colors with fringed edges'],
+    description: 'Exotic parrot tulips have fringed, ruffled petals that resemble tropical bird feathers.',
+    care: {
+      temperature: '60-65°F (15-18°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours direct sunlight',
+      watering: 'Moderate watering, protect from strong winds',
+      soil: 'Well-draining, fertile soil',
+      fertilizer: 'Balanced fertilizer for bulbs'
+    },
+    bloomTime: 'Late spring',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'double-tulip',
+    name: 'Double Tulip',
+    category: 'tulips',
+    image: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Various colors with double petals'],
+    description: 'Double tulips have multiple layers of petals, creating full, peony-like blooms.',
+    care: {
+      temperature: '60-65°F (15-18°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours direct sunlight',
+      watering: 'Regular watering, support heavy blooms',
+      soil: 'Rich, well-draining soil',
+      fertilizer: 'Bulb fertilizer at planting'
+    },
+    bloomTime: 'Mid to late spring',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'darwin-tulip',
+    name: 'Darwin Hybrid Tulip',
+    category: 'tulips',
+    image: 'https://images.pexels.com/photos/305854/pexels-photo-305854.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Red', 'Yellow', 'Orange', 'Pink'],
+    description: 'Large, sturdy tulips that are excellent for naturalizing and return year after year.',
+    care: {
+      temperature: '60-65°F (15-18°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours direct sunlight',
+      watering: 'Regular watering, very hardy variety',
+      soil: 'Well-draining garden soil',
+      fertilizer: 'Annual bulb fertilizer application'
+    },
+    bloomTime: 'Mid-spring',
+    difficulty: 'Easy'
+  },
+
+  // Sunflowers (8 varieties)
+  {
+    id: 'giant-sunflower',
+    name: 'Giant Sunflower',
+    category: 'sunflowers',
+    image: 'https://images.pexels.com/photos/33109/sunflower-sun-summer-yellow.jpg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Bright Yellow', 'Golden Yellow'],
+    description: 'Massive sunflowers that can grow up to 12 feet tall, perfect for creating dramatic garden displays.',
+    care: {
+      temperature: '70-80°F (21-27°C)',
+      humidity: '40-50%',
+      sunlight: '6-8 hours full sun',
+      watering: 'Deep weekly watering, drought tolerant once established',
+      soil: 'Well-draining, nutrient-rich soil',
+      fertilizer: 'High nitrogen fertilizer early in season'
+    },
+    bloomTime: 'Mid to late summer',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'dwarf-sunflower',
+    name: 'Dwarf Sunflower',
+    category: 'sunflowers',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Yellow', 'Orange', 'Red'],
+    description: 'Compact sunflowers perfect for containers and small gardens, growing 1-3 feet tall.',
+    care: {
+      temperature: '70-80°F (21-27°C)',
+      humidity: '40-50%',
+      sunlight: '6-8 hours full sun',
+      watering: 'Regular watering, good for containers',
+      soil: 'Well-draining potting mix or garden soil',
+      fertilizer: 'Balanced fertilizer every 2-3 weeks'
+    },
+    bloomTime: 'Summer to early fall',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'red-sunflower',
+    name: 'Red Sunflower',
+    category: 'sunflowers',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Deep Red', 'Burgundy', 'Mahogany'],
+    description: 'Striking red sunflowers that add dramatic color and unique beauty to any garden.',
+    care: {
+      temperature: '70-80°F (21-27°C)',
+      humidity: '40-50%',
+      sunlight: '6-8 hours full sun',
+      watering: 'Deep weekly watering, mulch around base',
+      soil: 'Rich, well-draining soil',
+      fertilizer: 'Balanced fertilizer monthly'
+    },
+    bloomTime: 'Mid to late summer',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'multi-branch-sunflower',
+    name: 'Multi-Branch Sunflower',
+    category: 'sunflowers',
+    image: 'https://images.pexels.com/photos/33109/sunflower-sun-summer-yellow.jpg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Yellow', 'Orange', 'Mixed'],
+    description: 'Branching sunflowers that produce multiple smaller blooms, perfect for cutting gardens.',
+    care: {
+      temperature: '70-80°F (21-27°C)',
+      humidity: '40-50%',
+      sunlight: '6-8 hours full sun',
+      watering: 'Regular watering, excellent for cut flowers',
+      soil: 'Fertile, well-draining soil',
+      fertilizer: 'Regular feeding for continuous blooms'
+    },
+    bloomTime: 'Summer through fall',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'teddy-bear-sunflower',
+    name: 'Teddy Bear Sunflower',
+    category: 'sunflowers',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Golden Yellow'],
+    description: 'Fluffy, double-petaled sunflowers that look like golden teddy bears, perfect for children\'s gardens.',
+    care: {
+      temperature: '70-80°F (21-27°C)',
+      humidity: '40-50%',
+      sunlight: '6-8 hours full sun',
+      watering: 'Regular watering, compact growth habit',
+      soil: 'Well-draining garden soil',
+      fertilizer: 'Light feeding, low maintenance'
+    },
+    bloomTime: 'Summer',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'italian-white-sunflower',
+    name: 'Italian White Sunflower',
+    category: 'sunflowers',
+    image: 'https://images.pexels.com/photos/33109/sunflower-sun-summer-yellow.jpg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Cream White', 'Pale Yellow'],
+    description: 'Elegant white sunflowers with dark centers, offering a sophisticated alternative to traditional yellow.',
+    care: {
+      temperature: '70-80°F (21-27°C)',
+      humidity: '40-50%',
+      sunlight: '6-8 hours full sun',
+      watering: 'Deep weekly watering, drought tolerant',
+      soil: 'Well-draining, fertile soil',
+      fertilizer: 'Moderate feeding during growing season'
+    },
+    bloomTime: 'Mid to late summer',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'autumn-beauty-sunflower',
+    name: 'Autumn Beauty Sunflower',
+    category: 'sunflowers',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Bronze', 'Red', 'Yellow', 'Orange'],
+    description: 'Multi-colored sunflowers with autumn hues, producing multiple blooms per plant.',
+    care: {
+      temperature: '70-80°F (21-27°C)',
+      humidity: '40-50%',
+      sunlight: '6-8 hours full sun',
+      watering: 'Regular watering, excellent for fall displays',
+      soil: 'Well-draining, nutrient-rich soil',
+      fertilizer: 'Balanced fertilizer throughout season'
+    },
+    bloomTime: 'Late summer to fall',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'mammoth-sunflower',
+    name: 'Mammoth Sunflower',
+    category: 'sunflowers',
+    image: 'https://images.pexels.com/photos/33109/sunflower-sun-summer-yellow.jpg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Bright Yellow'],
+    description: 'The largest variety of sunflowers, growing up to 15 feet tall with massive flower heads.',
+    care: {
+      temperature: '70-80°F (21-27°C)',
+      humidity: '40-50%',
+      sunlight: '8+ hours full sun',
+      watering: 'Deep watering twice weekly, needs support',
+      soil: 'Deep, rich, well-draining soil',
+      fertilizer: 'Heavy feeding with high nitrogen fertilizer'
+    },
+    bloomTime: 'Late summer',
+    difficulty: 'Medium'
+  },
+
+  // Orchids (11 varieties)
+  {
+    id: 'phalaenopsis-orchid',
+    name: 'Phalaenopsis Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White', 'Pink', 'Purple', 'Yellow'],
+    description: 'Also known as moth orchids, these are among the easiest orchids to grow and bloom for months.',
+    care: {
+      temperature: '65-80°F (18-27°C) during day, 60-70°F (15-21°C) at night',
+      humidity: '50-70%',
+      sunlight: 'Bright, indirect light',
+      watering: 'Weekly watering with lukewarm water, allow to drain',
+      soil: 'Orchid bark mix with good drainage',
+      fertilizer: 'Orchid fertilizer monthly at half strength'
+    },
+    bloomTime: 'Can bloom year-round',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'cattleya-orchid',
+    name: 'Cattleya Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Purple', 'Pink', 'White', 'Yellow'],
+    description: 'Large, showy orchids with intense fragrance, often called the "Queen of Orchids".',
+    care: {
+      temperature: '70-85°F (21-29°C) during day, 60-65°F (15-18°C) at night',
+      humidity: '50-80%',
+      sunlight: 'Bright light with some direct morning sun',
+      watering: 'Water when potting medium is nearly dry',
+      soil: 'Coarse orchid bark mix with excellent drainage',
+      fertilizer: 'High nitrogen fertilizer during growing season'
+    },
+    bloomTime: 'Fall to winter',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'dendrobium-orchid',
+    name: 'Dendrobium Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White', 'Purple', 'Pink', 'Yellow'],
+    description: 'Diverse group of orchids with cane-like stems and clusters of colorful flowers.',
+    care: {
+      temperature: '65-75°F (18-24°C) during day, 55-65°F (13-18°C) at night',
+      humidity: '50-70%',
+      sunlight: 'Bright, indirect light',
+      watering: 'Water thoroughly, then allow to dry between waterings',
+      soil: 'Well-draining orchid bark mix',
+      fertilizer: 'Balanced orchid fertilizer bi-weekly'
+    },
+    bloomTime: 'Winter to spring',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'oncidium-orchid',
+    name: 'Oncidium Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Yellow', 'Brown', 'White', 'Pink'],
+    description: 'Dancing lady orchids with sprays of small, delicate flowers that seem to dance in the breeze.',
+    care: {
+      temperature: '65-80°F (18-27°C) during day, 60-70°F (15-21°C) at night',
+      humidity: '40-70%',
+      sunlight: 'Bright, indirect light',
+      watering: 'Water when potting medium is almost dry',
+      soil: 'Fine to medium orchid bark mix',
+      fertilizer: 'Weak orchid fertilizer weekly'
+    },
+    bloomTime: 'Fall to winter',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'cymbidium-orchid',
+    name: 'Cymbidium Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Green', 'Yellow', 'Pink', 'White', 'Brown'],
+    description: 'Large orchids with long-lasting flowers, excellent for cut flower arrangements.',
+    care: {
+      temperature: '65-75°F (18-24°C) during day, 50-60°F (10-15°C) at night',
+      humidity: '40-60%',
+      sunlight: 'Bright light with some direct sun',
+      watering: 'Keep evenly moist during growing season',
+      soil: 'Coarse orchid bark mix with good drainage',
+      fertilizer: 'Regular feeding during growing season'
+    },
+    bloomTime: 'Winter to spring',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'paphiopedilum-orchid',
+    name: 'Paphiopedilum Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Green', 'Brown', 'White', 'Pink'],
+    description: 'Lady slipper orchids with unique pouch-shaped flowers and mottled foliage.',
+    care: {
+      temperature: '65-80°F (18-27°C) during day, 60-70°F (15-21°C) at night',
+      humidity: '50-70%',
+      sunlight: 'Low to medium indirect light',
+      watering: 'Keep evenly moist, never allow to dry completely',
+      soil: 'Fine orchid bark mix with perlite',
+      fertilizer: 'Weak fertilizer every other watering'
+    },
+    bloomTime: 'Various seasons depending on variety',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'vanda-orchid',
+    name: 'Vanda Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Blue', 'Purple', 'Pink', 'White'],
+    description: 'Spectacular orchids with large, flat flowers and thick aerial roots.',
+    care: {
+      temperature: '70-90°F (21-32°C) during day, 65-75°F (18-24°C) at night',
+      humidity: '60-80%',
+      sunlight: 'Very bright light with some direct sun',
+      watering: 'Daily watering of roots, excellent drainage essential',
+      soil: 'Often grown in baskets with minimal or no potting medium',
+      fertilizer: 'Weekly weak fertilizer solution'
+    },
+    bloomTime: 'Multiple times per year',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'miltonia-orchid',
+    name: 'Miltonia Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White', 'Pink', 'Red', 'Yellow'],
+    description: 'Pansy orchids with flat, face-like flowers that resemble pansies.',
+    care: {
+      temperature: '65-75°F (18-24°C) during day, 60-65°F (15-18°C) at night',
+      humidity: '50-70%',
+      sunlight: 'Medium indirect light',
+      watering: 'Keep evenly moist, good air circulation',
+      soil: 'Fine orchid bark mix',
+      fertilizer: 'Balanced orchid fertilizer monthly'
+    },
+    bloomTime: 'Spring to summer',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'brassia-orchid',
+    name: 'Brassia Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Yellow-green', 'Brown spots'],
+    description: 'Spider orchids with long, narrow petals that resemble spider legs.',
+    care: {
+      temperature: '65-80°F (18-27°C) during day, 60-70°F (15-21°C) at night',
+      humidity: '50-70%',
+      sunlight: 'Bright, indirect light',
+      watering: 'Water when potting medium is nearly dry',
+      soil: 'Medium orchid bark mix',
+      fertilizer: 'Weak orchid fertilizer bi-weekly'
+    },
+    bloomTime: 'Spring to summer',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'zygopetalum-orchid',
+    name: 'Zygopetalum Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Green', 'Purple', 'White'],
+    description: 'Fragrant orchids with distinctive purple and white lip markings.',
+    care: {
+      temperature: '60-75°F (15-24°C) during day, 55-65°F (13-18°C) at night',
+      humidity: '50-70%',
+      sunlight: 'Medium to bright indirect light',
+      watering: 'Keep evenly moist, never allow to dry completely',
+      soil: 'Fine to medium orchid bark mix',
+      fertilizer: 'Regular weak fertilizer applications'
+    },
+    bloomTime: 'Fall to winter',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'epidendrum-orchid',
+    name: 'Epidendrum Orchid',
+    category: 'orchids',
+    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Orange', 'Red', 'Yellow', 'Pink'],
+    description: 'Hardy orchids that can be grown outdoors in warm climates, with clusters of small flowers.',
+    care: {
+      temperature: '65-85°F (18-29°C) during day, 60-70°F (15-21°C) at night',
+      humidity: '50-70%',
+      sunlight: 'Bright light with some direct sun',
+      watering: 'Water regularly, allow to dry slightly between waterings',
+      soil: 'Well-draining orchid bark mix',
+      fertilizer: 'Regular feeding during growing season'
+    },
+    bloomTime: 'Year-round in ideal conditions',
+    difficulty: 'Easy'
+  },
+
+  // Daisies (9 varieties)
+  {
+    id: 'shasta-daisy',
+    name: 'Shasta Daisy',
+    category: 'daisies',
+    image: 'https://images.pexels.com/photos/56875/tree-dawn-nature-sunset-56875.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White with yellow center'],
+    description: 'Classic white daisies with bright yellow centers, perfect for cottage gardens and wildflower meadows.',
+    care: {
+      temperature: '60-70°F (15-21°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours full sun',
+      watering: 'Regular watering, drought tolerant once established',
+      soil: 'Well-draining, average garden soil',
+      fertilizer: 'Light feeding in spring'
+    },
+    bloomTime: 'Early summer to fall',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'african-daisy',
+    name: 'African Daisy',
+    category: 'daisies',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Orange', 'Yellow', 'Pink', 'Purple', 'White'],
+    description: 'Colorful daisies with vibrant petals and dark centers, excellent for hot, dry conditions.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '30-50%',
+      sunlight: '6+ hours full sun',
+      watering: 'Low water needs, drought tolerant',
+      soil: 'Well-draining, sandy soil',
+      fertilizer: 'Light feeding, low maintenance'
+    },
+    bloomTime: 'Spring through fall',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'gerbera-daisy',
+    name: 'Gerbera Daisy',
+    category: 'daisies',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Red', 'Pink', 'Orange', 'Yellow', 'White'],
+    description: 'Large, colorful daisies with perfect symmetry, popular for bouquets and arrangements.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours bright light',
+      watering: 'Regular watering, avoid water on leaves',
+      soil: 'Well-draining, fertile soil',
+      fertilizer: 'Regular feeding during growing season'
+    },
+    bloomTime: 'Spring through fall',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'english-daisy',
+    name: 'English Daisy',
+    category: 'daisies',
+    image: 'https://images.pexels.com/photos/56875/tree-dawn-nature-sunset-56875.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White', 'Pink', 'Red'],
+    description: 'Small, charming daisies that form low carpets, perfect for edging and ground cover.',
+    care: {
+      temperature: '50-65°F (10-18°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours partial sun',
+      watering: 'Regular watering, prefers cool, moist conditions',
+      soil: 'Moist, well-draining soil',
+      fertilizer: 'Light feeding in spring'
+    },
+    bloomTime: 'Spring to early summer',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'painted-daisy',
+    name: 'Painted Daisy',
+    category: 'daisies',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Pink', 'Red', 'White', 'Purple'],
+    description: 'Delicate daisies with finely cut foliage and pastel-colored petals.',
+    care: {
+      temperature: '60-70°F (15-21°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours full sun',
+      watering: 'Moderate watering, good drainage essential',
+      soil: 'Well-draining, fertile soil',
+      fertilizer: 'Light feeding in spring and mid-summer'
+    },
+    bloomTime: 'Late spring to early summer',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'ox-eye-daisy',
+    name: 'Ox-Eye Daisy',
+    category: 'daisies',
+    image: 'https://images.pexels.com/photos/56875/tree-dawn-nature-sunset-56875.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White with yellow center'],
+    description: 'Wild daisies that naturalize easily, perfect for meadow gardens and natural landscapes.',
+    care: {
+      temperature: '60-75°F (15-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours full sun',
+      watering: 'Low water needs, very drought tolerant',
+      soil: 'Adaptable to poor soils, well-draining',
+      fertilizer: 'No fertilizer needed, very low maintenance'
+    },
+    bloomTime: 'Late spring through summer',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'gloriosa-daisy',
+    name: 'Gloriosa Daisy',
+    category: 'daisies',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Yellow', 'Orange', 'Red', 'Bicolor'],
+    description: 'Large, showy daisies with golden petals and dark centers, also known as Black-eyed Susan.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours full sun',
+      watering: 'Moderate watering, drought tolerant',
+      soil: 'Well-draining, average to poor soil',
+      fertilizer: 'Light feeding, very low maintenance'
+    },
+    bloomTime: 'Summer through fall',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'marguerite-daisy',
+    name: 'Marguerite Daisy',
+    category: 'daisies',
+    image: 'https://images.pexels.com/photos/56875/tree-dawn-nature-sunset-56875.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White', 'Yellow', 'Pink'],
+    description: 'Bushy perennial daisies with finely cut foliage and abundant blooms.',
+    care: {
+      temperature: '60-70°F (15-21°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours full sun',
+      watering: 'Regular watering, deadhead for continuous blooms',
+      soil: 'Well-draining, fertile soil',
+      fertilizer: 'Monthly feeding during growing season'
+    },
+    bloomTime: 'Spring through fall',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'cape-daisy',
+    name: 'Cape Daisy',
+    category: 'daisies',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Purple', 'Pink', 'White', 'Yellow'],
+    description: 'Trailing daisies perfect for hanging baskets and ground cover with continuous blooms.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours full sun',
+      watering: 'Regular watering, excellent drainage required',
+      soil: 'Well-draining, sandy soil',
+      fertilizer: 'Light feeding every 4-6 weeks'
+    },
+    bloomTime: 'Year-round in mild climates',
+    difficulty: 'Easy'
+  },
+
+  // Lilies (10 varieties)
+  {
+    id: 'easter-lily',
+    name: 'Easter Lily',
+    category: 'lilies',
+    image: 'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Pure White'],
+    description: 'Elegant white lilies with a heavenly fragrance, traditionally associated with Easter celebrations.',
+    care: {
+      temperature: '60-75°F (15-24°C)',
+      humidity: '40-60%',
+      sunlight: '4-6 hours morning sun, afternoon shade',
+      watering: 'Keep soil consistently moist but not waterlogged',
+      soil: 'Well-draining, organic-rich soil',
+      fertilizer: 'Balanced fertilizer every 2-3 weeks during growing season'
+    },
+    bloomTime: 'Late spring to early summer',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'tiger-lily',
+    name: 'Tiger Lily',
+    category: 'lilies',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Orange with black spots'],
+    description: 'Bold orange lilies with distinctive black spots and recurved petals.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '50-70%',
+      sunlight: '6+ hours full sun to partial shade',
+      watering: 'Regular watering, mulch to keep roots cool',
+      soil: 'Well-draining, slightly acidic soil',
+      fertilizer: 'Balanced fertilizer in spring and mid-summer'
+    },
+    bloomTime: 'Mid to late summer',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'asiatic-lily',
+    name: 'Asiatic Lily',
+    category: 'lilies',
+    image: 'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Red', 'Orange', 'Yellow', 'Pink', 'White'],
+    description: 'Hardy lilies with upward-facing flowers, available in many bright colors.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours full sun',
+      watering: 'Regular watering, excellent drainage essential',
+      soil: 'Well-draining, neutral to slightly acidic soil',
+      fertilizer: 'Balanced fertilizer at planting and mid-season'
+    },
+    bloomTime: 'Early to mid-summer',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'oriental-lily',
+    name: 'Oriental Lily',
+    category: 'lilies',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White', 'Pink', 'Red', 'Yellow'],
+    description: 'Large, fragrant lilies with exotic appearance and intense perfume.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours morning sun, afternoon shade',
+      watering: 'Consistent moisture, mulch heavily',
+      soil: 'Rich, well-draining, acidic soil',
+      fertilizer: 'Regular feeding with acid-loving plant fertilizer'
+    },
+    bloomTime: 'Late summer',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'daylily',
+    name: 'Daylily',
+    category: 'lilies',
+    image: 'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Yellow', 'Orange', 'Red', 'Pink', 'Purple'],
+    description: 'Easy-care perennials with grass-like foliage and trumpet-shaped flowers.',
+    care: {
+      temperature: '60-80°F (15-27°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours full sun for best blooming',
+      watering: 'Moderate watering, drought tolerant once established',
+      soil: 'Adaptable to most soil types, well-draining preferred',
+      fertilizer: 'Light feeding in spring, very low maintenance'
+    },
+    bloomTime: 'Summer, varies by variety',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'calla-lily',
+    name: 'Calla Lily',
+    category: 'lilies',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White', 'Pink', 'Yellow', 'Purple', 'Black'],
+    description: 'Elegant lilies with distinctive trumpet-shaped flowers and arrow-shaped leaves.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours bright, indirect light',
+      watering: 'Keep soil consistently moist during growing season',
+      soil: 'Rich, well-draining soil with organic matter',
+      fertilizer: 'Monthly feeding during active growth'
+    },
+    bloomTime: 'Spring to summer',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'peace-lily',
+    name: 'Peace Lily',
+    category: 'lilies',
+    image: 'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White'],
+    description: 'Popular houseplant with glossy leaves and white spoon-shaped flowers.',
+    care: {
+      temperature: '65-80°F (18-27°C)',
+      humidity: '40-60%',
+      sunlight: 'Bright, indirect light',
+      watering: 'Keep soil consistently moist, not soggy',
+      soil: 'Well-draining potting mix',
+      fertilizer: 'Monthly feeding during growing season'
+    },
+    bloomTime: 'Spring and summer',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'stargazer-lily',
+    name: 'Stargazer Lily',
+    category: 'lilies',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['Pink with white edges and dark spots'],
+    description: 'Spectacular oriental lilies with upward-facing flowers and intense fragrance.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '50-70%',
+      sunlight: '6+ hours morning sun, afternoon shade',
+      watering: 'Regular watering, keep roots cool with mulch',
+      soil: 'Rich, well-draining, slightly acidic soil',
+      fertilizer: 'Regular feeding with balanced fertilizer'
+    },
+    bloomTime: 'Mid to late summer',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'lily-of-the-valley',
+    name: 'Lily of the Valley',
+    category: 'lilies',
+    image: 'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White', 'Pink'],
+    description: 'Delicate woodland plants with tiny bell-shaped flowers and sweet fragrance.',
+    care: {
+      temperature: '60-70°F (15-21°C)',
+      humidity: '50-70%',
+      sunlight: 'Partial to full shade',
+      watering: 'Regular watering, prefers consistently moist soil',
+      soil: 'Rich, well-draining, organic soil',
+      fertilizer: 'Light feeding with organic fertilizer in spring'
+    },
+    bloomTime: 'Late spring',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'trumpet-lily',
+    name: 'Trumpet Lily',
+    category: 'lilies',
+    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    colors: ['White', 'Yellow', 'Pink'],
+    description: 'Large, trumpet-shaped lilies with intense fragrance and impressive height.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '50-70%',
+      sunlight: '6+ hours full sun',
+      watering: 'Regular deep watering, mulch around base',
+      soil: 'Deep, rich, well-draining soil',
+      fertilizer: 'Heavy feeding during growing season'
+    },
+    bloomTime: 'Mid to late summer',
+    difficulty: 'Medium'
+  }
+];

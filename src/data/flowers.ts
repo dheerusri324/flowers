@@ -530,7 +530,7 @@ export const flowers: Flower[] = [
     id: 'multi-branch-sunflower',
     name: 'Multi-Branch Sunflower',
     category: 'sunflowers',
-    image: 'https://images.pexels.com/photos/33109/sunflower-sun-summer-yellow.jpg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://i.ebayimg.com/images/g/0uAAAOSwiGViQmus/s-l1200.jpg',
     colors: ['Yellow', 'Orange', 'Mixed'],
     description: 'Branching sunflowers that produce multiple smaller blooms, perfect for cutting gardens.',
     care: {

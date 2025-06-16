@@ -476,7 +476,7 @@ export const flowers: Flower[] = [
     id: 'giant-sunflower',
     name: 'Giant Sunflower',
     category: 'sunflowers',
-    image: 'https://images.pexels.com/photos/33109/sunflower-sun-summer-yellow.jpg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1705420300038-91bb0191d3cb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Bright Yellow', 'Golden Yellow'],
     description: 'Massive sunflowers that can grow up to 12 feet tall, perfect for creating dramatic garden displays.',
     care: {

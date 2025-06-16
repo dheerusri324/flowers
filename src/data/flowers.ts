@@ -148,7 +148,7 @@ export const flowers: Flower[] = [
     id: 'orange-rose',
     name: 'Orange Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/32556252/pexels-photo-32556252/free-photo-of-vibrant-orange-rose-bloom-amidst-green-foliage.jpeg',
     colors: ['Bright Orange', 'Coral Orange', 'Peach'],
     description: 'Orange roses represent enthusiasm, passion, and energy, making them perfect for vibrant garden displays.',
     care: {

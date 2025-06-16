@@ -67,6 +67,13 @@ export const categories: Category[] = [
     description: 'Elegant and fragrant flowers with distinctive trumpet shapes',
     image: 'https://images.pexels.com/photos/17555896/pexels-photo-17555896/free-photo-of-white-blooming-lily-surrounded-by-buds.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     flowerCount: 10
+  },
+  {
+    id: 'rare',
+    name: 'Rare Flowers',
+    description: 'Extraordinary and exotic flowers that are truly one-of-a-kind',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    flowerCount: 12
   }
 ];
 
@@ -622,7 +629,7 @@ export const flowers: Flower[] = [
     id: 'phalaenopsis-orchid',
     name: 'Phalaenopsis Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White', 'Pink', 'Purple', 'Yellow'],
     description: 'Also known as moth orchids, these are among the easiest orchids to grow and bloom for months.',
     care: {
@@ -640,7 +647,7 @@ export const flowers: Flower[] = [
     id: 'cattleya-orchid',
     name: 'Cattleya Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Purple', 'Pink', 'White', 'Yellow'],
     description: 'Large, showy orchids with intense fragrance, often called the "Queen of Orchids".',
     care: {
@@ -658,7 +665,7 @@ export const flowers: Flower[] = [
     id: 'dendrobium-orchid',
     name: 'Dendrobium Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White', 'Purple', 'Pink', 'Yellow'],
     description: 'Diverse group of orchids with cane-like stems and clusters of colorful flowers.',
     care: {
@@ -676,7 +683,7 @@ export const flowers: Flower[] = [
     id: 'oncidium-orchid',
     name: 'Oncidium Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Yellow', 'Brown', 'White', 'Pink'],
     description: 'Dancing lady orchids with sprays of small, delicate flowers that seem to dance in the breeze.',
     care: {
@@ -694,7 +701,7 @@ export const flowers: Flower[] = [
     id: 'cymbidium-orchid',
     name: 'Cymbidium Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Green', 'Yellow', 'Pink', 'White', 'Brown'],
     description: 'Large orchids with long-lasting flowers, excellent for cut flower arrangements.',
     care: {
@@ -712,7 +719,7 @@ export const flowers: Flower[] = [
     id: 'paphiopedilum-orchid',
     name: 'Paphiopedilum Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Green', 'Brown', 'White', 'Pink'],
     description: 'Lady slipper orchids with unique pouch-shaped flowers and mottled foliage.',
     care: {
@@ -730,7 +737,7 @@ export const flowers: Flower[] = [
     id: 'vanda-orchid',
     name: 'Vanda Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Blue', 'Purple', 'Pink', 'White'],
     description: 'Spectacular orchids with large, flat flowers and thick aerial roots.',
     care: {
@@ -748,7 +755,7 @@ export const flowers: Flower[] = [
     id: 'miltonia-orchid',
     name: 'Miltonia Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White', 'Pink', 'Red', 'Yellow'],
     description: 'Pansy orchids with flat, face-like flowers that resemble pansies.',
     care: {
@@ -766,7 +773,7 @@ export const flowers: Flower[] = [
     id: 'brassia-orchid',
     name: 'Brassia Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Yellow-green', 'Brown spots'],
     description: 'Spider orchids with long, narrow petals that resemble spider legs.',
     care: {
@@ -784,7 +791,7 @@ export const flowers: Flower[] = [
     id: 'zygopetalum-orchid',
     name: 'Zygopetalum Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Green', 'Purple', 'White'],
     description: 'Fragrant orchids with distinctive purple and white lip markings.',
     care: {
@@ -802,7 +809,7 @@ export const flowers: Flower[] = [
     id: 'epidendrum-orchid',
     name: 'Epidendrum Orchid',
     category: 'orchids',
-    image: 'https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Orange', 'Red', 'Yellow', 'Pink'],
     description: 'Hardy orchids that can be grown outdoors in warm climates, with clusters of small flowers.',
     care: {
@@ -822,7 +829,7 @@ export const flowers: Flower[] = [
     id: 'shasta-daisy',
     name: 'Shasta Daisy',
     category: 'daisies',
-    image: 'https://images.pexels.com/photos/56875/tree-dawn-nature-sunset-56875.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White with yellow center'],
     description: 'Classic white daisies with bright yellow centers, perfect for cottage gardens and wildflower meadows.',
     care: {
@@ -840,7 +847,7 @@ export const flowers: Flower[] = [
     id: 'african-daisy',
     name: 'African Daisy',
     category: 'daisies',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1597848212624-e593c83edd72?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Orange', 'Yellow', 'Pink', 'Purple', 'White'],
     description: 'Colorful daisies with vibrant petals and dark centers, excellent for hot, dry conditions.',
     care: {
@@ -858,7 +865,7 @@ export const flowers: Flower[] = [
     id: 'gerbera-daisy',
     name: 'Gerbera Daisy',
     category: 'daisies',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1597848212624-e593c83edd72?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Red', 'Pink', 'Orange', 'Yellow', 'White'],
     description: 'Large, colorful daisies with perfect symmetry, popular for bouquets and arrangements.',
     care: {
@@ -876,7 +883,7 @@ export const flowers: Flower[] = [
     id: 'english-daisy',
     name: 'English Daisy',
     category: 'daisies',
-    image: 'https://images.pexels.com/photos/56875/tree-dawn-nature-sunset-56875.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White', 'Pink', 'Red'],
     description: 'Small, charming daisies that form low carpets, perfect for edging and ground cover.',
     care: {
@@ -894,7 +901,7 @@ export const flowers: Flower[] = [
     id: 'painted-daisy',
     name: 'Painted Daisy',
     category: 'daisies',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1597848212624-e593c83edd72?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Pink', 'Red', 'White', 'Purple'],
     description: 'Delicate daisies with finely cut foliage and pastel-colored petals.',
     care: {
@@ -912,7 +919,7 @@ export const flowers: Flower[] = [
     id: 'ox-eye-daisy',
     name: 'Ox-Eye Daisy',
     category: 'daisies',
-    image: 'https://images.pexels.com/photos/56875/tree-dawn-nature-sunset-56875.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White with yellow center'],
     description: 'Wild daisies that naturalize easily, perfect for meadow gardens and natural landscapes.',
     care: {
@@ -930,7 +937,7 @@ export const flowers: Flower[] = [
     id: 'gloriosa-daisy',
     name: 'Gloriosa Daisy',
     category: 'daisies',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1597848212624-e593c83edd72?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Yellow', 'Orange', 'Red', 'Bicolor'],
     description: 'Large, showy daisies with golden petals and dark centers, also known as Black-eyed Susan.',
     care: {
@@ -948,7 +955,7 @@ export const flowers: Flower[] = [
     id: 'marguerite-daisy',
     name: 'Marguerite Daisy',
     category: 'daisies',
-    image: 'https://images.pexels.com/photos/56875/tree-dawn-nature-sunset-56875.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White', 'Yellow', 'Pink'],
     description: 'Bushy perennial daisies with finely cut foliage and abundant blooms.',
     care: {
@@ -966,7 +973,7 @@ export const flowers: Flower[] = [
     id: 'cape-daisy',
     name: 'Cape Daisy',
     category: 'daisies',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1597848212624-e593c83edd72?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Purple', 'Pink', 'White', 'Yellow'],
     description: 'Trailing daisies perfect for hanging baskets and ground cover with continuous blooms.',
     care: {
@@ -986,7 +993,7 @@ export const flowers: Flower[] = [
     id: 'easter-lily',
     name: 'Easter Lily',
     category: 'lilies',
-    image: 'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Pure White'],
     description: 'Elegant white lilies with a heavenly fragrance, traditionally associated with Easter celebrations.',
     care: {
@@ -1004,7 +1011,7 @@ export const flowers: Flower[] = [
     id: 'tiger-lily',
     name: 'Tiger Lily',
     category: 'lilies',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Orange with black spots'],
     description: 'Bold orange lilies with distinctive black spots and recurved petals.',
     care: {
@@ -1022,7 +1029,7 @@ export const flowers: Flower[] = [
     id: 'asiatic-lily',
     name: 'Asiatic Lily',
     category: 'lilies',
-    image: 'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Red', 'Orange', 'Yellow', 'Pink', 'White'],
     description: 'Hardy lilies with upward-facing flowers, available in many bright colors.',
     care: {
@@ -1040,7 +1047,7 @@ export const flowers: Flower[] = [
     id: 'oriental-lily',
     name: 'Oriental Lily',
     category: 'lilies',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White', 'Pink', 'Red', 'Yellow'],
     description: 'Large, fragrant lilies with exotic appearance and intense perfume.',
     care: {
@@ -1058,7 +1065,7 @@ export const flowers: Flower[] = [
     id: 'daylily',
     name: 'Daylily',
     category: 'lilies',
-    image: 'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Yellow', 'Orange', 'Red', 'Pink', 'Purple'],
     description: 'Easy-care perennials with grass-like foliage and trumpet-shaped flowers.',
     care: {
@@ -1076,7 +1083,7 @@ export const flowers: Flower[] = [
     id: 'calla-lily',
     name: 'Calla Lily',
     category: 'lilies',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White', 'Pink', 'Yellow', 'Purple', 'Black'],
     description: 'Elegant lilies with distinctive trumpet-shaped flowers and arrow-shaped leaves.',
     care: {
@@ -1094,7 +1101,7 @@ export const flowers: Flower[] = [
     id: 'peace-lily',
     name: 'Peace Lily',
     category: 'lilies',
-    image: 'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White'],
     description: 'Popular houseplant with glossy leaves and white spoon-shaped flowers.',
     care: {
@@ -1112,7 +1119,7 @@ export const flowers: Flower[] = [
     id: 'stargazer-lily',
     name: 'Stargazer Lily',
     category: 'lilies',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Pink with white edges and dark spots'],
     description: 'Spectacular oriental lilies with upward-facing flowers and intense fragrance.',
     care: {
@@ -1130,7 +1137,7 @@ export const flowers: Flower[] = [
     id: 'lily-of-the-valley',
     name: 'Lily of the Valley',
     category: 'lilies',
-    image: 'https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White', 'Pink'],
     description: 'Delicate woodland plants with tiny bell-shaped flowers and sweet fragrance.',
     care: {
@@ -1148,7 +1155,7 @@ export const flowers: Flower[] = [
     id: 'trumpet-lily',
     name: 'Trumpet Lily',
     category: 'lilies',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['White', 'Yellow', 'Pink'],
     description: 'Large, trumpet-shaped lilies with intense fragrance and impressive height.',
     care: {
@@ -1161,5 +1168,223 @@ export const flowers: Flower[] = [
     },
     bloomTime: 'Mid to late summer',
     difficulty: 'Medium'
+  },
+
+  // Rare Flowers (12 varieties)
+  {
+    id: 'ghost-orchid',
+    name: 'Ghost Orchid',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['Pure White', 'Translucent'],
+    description: 'Extremely rare epiphytic orchid that appears to float like a ghost, found only in specific swamp conditions.',
+    care: {
+      temperature: '75-85°F (24-29°C) during day, 65-75°F (18-24°C) at night',
+      humidity: '80-95%',
+      sunlight: 'Filtered light, no direct sun',
+      watering: 'Constant high humidity, misting required',
+      soil: 'Grows on tree bark, no soil needed',
+      fertilizer: 'Very dilute orchid fertilizer monthly'
+    },
+    bloomTime: 'Summer (very unpredictable)',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'jade-vine',
+    name: 'Jade Vine',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['Turquoise Blue', 'Blue-Green'],
+    description: 'Spectacular climbing vine with unique turquoise flowers that hang in clusters like grapes.',
+    care: {
+      temperature: '70-85°F (21-29°C)',
+      humidity: '60-80%',
+      sunlight: 'Bright, filtered light',
+      watering: 'Regular watering, keep soil moist but not waterlogged',
+      soil: 'Rich, well-draining tropical soil mix',
+      fertilizer: 'Monthly feeding with balanced fertilizer'
+    },
+    bloomTime: 'Spring to early summer',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'chocolate-cosmos',
+    name: 'Chocolate Cosmos',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1597848212624-e593c83edd72?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['Deep Burgundy', 'Dark Red-Brown'],
+    description: 'Extinct in the wild, this flower smells exactly like chocolate and has velvety dark petals.',
+    care: {
+      temperature: '65-75°F (18-24°C)',
+      humidity: '40-60%',
+      sunlight: '6+ hours full sun',
+      watering: 'Regular watering during growing season, reduce in winter',
+      soil: 'Well-draining, fertile soil',
+      fertilizer: 'Monthly feeding during active growth'
+    },
+    bloomTime: 'Late summer to fall',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'black-bat-flower',
+    name: 'Black Bat Flower',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['Deep Black', 'Dark Purple'],
+    description: 'Bizarre tropical flower that resembles a bat in flight with long whisker-like bracts.',
+    care: {
+      temperature: '70-80°F (21-27°C)',
+      humidity: '70-90%',
+      sunlight: 'Bright, indirect light',
+      watering: 'Keep soil consistently moist, high humidity essential',
+      soil: 'Rich, well-draining tropical potting mix',
+      fertilizer: 'Bi-weekly feeding with dilute fertilizer'
+    },
+    bloomTime: 'Summer to fall',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'corpse-flower',
+    name: 'Corpse Flower',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['Deep Red', 'Burgundy', 'Green'],
+    description: 'World\'s largest unbranched flower that can grow up to 10 feet tall and smells like rotting flesh.',
+    care: {
+      temperature: '75-85°F (24-29°C)',
+      humidity: '60-80%',
+      sunlight: 'Bright, indirect light',
+      watering: 'Keep soil moist during growing season, dry during dormancy',
+      soil: 'Rich, well-draining soil with organic matter',
+      fertilizer: 'Heavy feeding during active growth period'
+    },
+    bloomTime: 'Unpredictable, every 3-10 years',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'blue-passion-flower',
+    name: 'Blue Passion Flower',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['Deep Blue', 'Purple', 'White'],
+    description: 'Intricate flower with complex structure featuring blue petals and elaborate corona filaments.',
+    care: {
+      temperature: '65-80°F (18-27°C)',
+      humidity: '50-70%',
+      sunlight: '6+ hours full sun to partial shade',
+      watering: 'Regular watering, drought tolerant once established',
+      soil: 'Well-draining soil, adaptable to various types',
+      fertilizer: 'Monthly feeding during growing season'
+    },
+    bloomTime: 'Summer to fall',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'fire-lily',
+    name: 'Fire Lily',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['Bright Red', 'Orange-Red', 'Yellow edges'],
+    description: 'Spectacular climbing lily with flame-colored petals that seem to dance like fire.',
+    care: {
+      temperature: '70-85°F (21-29°C)',
+      humidity: '60-80%',
+      sunlight: '4-6 hours morning sun, afternoon shade',
+      watering: 'Regular watering, keep roots cool and moist',
+      soil: 'Rich, well-draining, slightly acidic soil',
+      fertilizer: 'Regular feeding with balanced fertilizer'
+    },
+    bloomTime: 'Late summer to fall',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'night-blooming-cereus',
+    name: 'Night-Blooming Cereus',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['Pure White', 'Cream'],
+    description: 'Magnificent cactus flower that blooms only once a year for a single night, then closes forever.',
+    care: {
+      temperature: '65-80°F (18-27°C)',
+      humidity: '30-50%',
+      sunlight: 'Bright, indirect light',
+      watering: 'Infrequent watering, allow soil to dry between waterings',
+      soil: 'Well-draining cactus soil mix',
+      fertilizer: 'Light feeding during growing season'
+    },
+    bloomTime: 'One night per year in summer',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'rainbow-eucalyptus-flower',
+    name: 'Rainbow Eucalyptus Flower',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['White', 'Cream', 'Rainbow bark'],
+    description: 'Unique flowers from the rainbow eucalyptus tree, known for its multicolored peeling bark.',
+    care: {
+      temperature: '70-85°F (21-29°C)',
+      humidity: '60-80%',
+      sunlight: '8+ hours full sun',
+      watering: 'Regular watering, prefers consistently moist soil',
+      soil: 'Well-draining, fertile soil',
+      fertilizer: 'Monthly feeding with balanced fertilizer'
+    },
+    bloomTime: 'Year-round in tropical climates',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'living-stone-flower',
+    name: 'Living Stone Flower',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1597848212624-e593c83edd72?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['White', 'Yellow', 'Pink'],
+    description: 'Extraordinary succulent that perfectly mimics stones until it produces bright daisy-like flowers.',
+    care: {
+      temperature: '65-80°F (18-27°C)',
+      humidity: '20-40%',
+      sunlight: '6+ hours bright light',
+      watering: 'Very infrequent watering, drought dormant periods',
+      soil: 'Extremely well-draining, sandy soil',
+      fertilizer: 'No fertilizer needed, very low maintenance'
+    },
+    bloomTime: 'Fall to winter',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'dragon-arum',
+    name: 'Dragon Arum',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['Deep Purple', 'Black', 'Green'],
+    description: 'Dramatic Mediterranean flower with a dark purple spathe and foul odor to attract flies.',
+    care: {
+      temperature: '60-75°F (15-24°C)',
+      humidity: '50-70%',
+      sunlight: '4-6 hours partial shade',
+      watering: 'Regular watering during growing season, dry dormancy',
+      soil: 'Well-draining, rocky soil',
+      fertilizer: 'Light feeding during active growth'
+    },
+    bloomTime: 'Late spring to early summer',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'sensitive-plant-flower',
+    name: 'Sensitive Plant Flower',
+    category: 'rare',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    colors: ['Pink', 'Purple', 'White'],
+    description: 'Fascinating plant with leaves that fold instantly when touched, producing delicate pom-pom flowers.',
+    care: {
+      temperature: '70-80°F (21-27°C)',
+      humidity: '50-70%',
+      sunlight: '6+ hours bright light',
+      watering: 'Keep soil consistently moist',
+      soil: 'Well-draining potting mix',
+      fertilizer: 'Monthly feeding with dilute fertilizer'
+    },
+    bloomTime: 'Summer to fall',
+    difficulty: 'Easy'
   }
 ];

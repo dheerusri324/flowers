@@ -319,7 +319,7 @@ export const flowers: Flower[] = [
     id: 'yellow-tulip',
     name: 'Yellow Tulip',
     category: 'tulips',
-    image: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1559627034-65ebc43688a5?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Bright Yellow', 'Golden Yellow', 'Lemon Yellow'],
     description: 'Cheerful yellow tulips bring sunshine to any garden and symbolize happiness and hope.',
     care: {

@@ -76,7 +76,7 @@ export const flowers: Flower[] = [
     id: 'red-rose',
     name: 'Red Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/1003914/pexels-photo-1003914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     colors: ['Deep Red', 'Crimson', 'Burgundy'],
     description: 'The classic symbol of love and passion, red roses are the most popular choice for romantic occasions.',
     care: {

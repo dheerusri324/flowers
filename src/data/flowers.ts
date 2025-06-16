@@ -173,7 +173,7 @@ export const flowers: Flower[] = [
     id: 'purple-rose',
     name: 'Purple Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://cdn.shopify.com/s/files/1/0780/3119/2375/files/pexels-_-_-12200817_600x600.jpg?v=1696324147',
     colors: ['Deep Purple', 'Lavender', 'Mauve'],
     description: 'Purple roses symbolize enchantment and mystery, adding an exotic touch to any garden.',
     care: {
@@ -191,7 +191,7 @@ export const flowers: Flower[] = [
     id: 'climbing-rose',
     name: 'Climbing Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://lalitenterprise.com/cdn/shop/files/Untitleddesign-2024-04-26T182923.830.webp?v=1716639264&width=1445',
     colors: ['Pink', 'Red', 'White', 'Yellow'],
     description: 'Climbing roses create stunning vertical displays on walls, fences, and trellises.',
     care: {
@@ -209,7 +209,7 @@ export const flowers: Flower[] = [
     id: 'miniature-rose',
     name: 'Miniature Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://mygardenlife.com/wp-content/uploads/2023/01/Pink-miniature-rose.jpg',
     colors: ['All colors available'],
     description: 'Compact roses perfect for containers, borders, and small spaces with full-sized beauty.',
     care: {
@@ -227,7 +227,7 @@ export const flowers: Flower[] = [
     id: 'hybrid-tea-rose',
     name: 'Hybrid Tea Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.immediate.co.uk/production/volatile/sites/10/2018/02/bfc76ef2-b20d-4937-8f00-b1125eaa4f0a-626b7df.jpg?quality=90&resize=940,627',
     colors: ['All classic rose colors'],
     description: 'The classic long-stemmed roses with large, elegant blooms perfect for cutting.',
     care: {
@@ -245,7 +245,7 @@ export const flowers: Flower[] = [
     id: 'garden-rose',
     name: 'Garden Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/133464/pexels-photo-133464.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://mainaamgarden.com/cdn/shop/collections/queen_of_sweden_1200x600_crop_center.jpg?v=1623050257',
     colors: ['Mixed varieties'],
     description: 'Hardy, disease-resistant roses that bloom repeatedly throughout the growing season.',
     care: {
@@ -263,7 +263,7 @@ export const flowers: Flower[] = [
     id: 'antique-rose',
     name: 'Antique Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://www.wagnersrosenursery.com.au/cdn/shop/products/BathshebaL.jpg?v=1609300454',
     colors: ['Soft pastels', 'Deep vintage colors'],
     description: 'Heritage roses with old-world charm, intense fragrance, and romantic appeal.',
     care: {
@@ -281,7 +281,7 @@ export const flowers: Flower[] = [
     id: 'floribunda-rose',
     name: 'Floribunda Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://en.famousroses.eu/cdn/shop/files/boscobel-english-floribunda-rose-bred-by-david-austin-191463.jpg?v=1720523223',
     colors: ['Wide variety of colors'],
     description: 'Clusters of smaller blooms that provide continuous color throughout the season.',
     care: {
@@ -1282,7 +1282,7 @@ export const flowers: Flower[] = [
   {
     id: 'fire-lily',
     name: 'Fire Lily',
-    category: 'rare-flowers',
+    category: 'rare',
     image: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Gloriosa_superba_-_Glory_Lily.jpg',
     colors: ['Red', 'Orange', 'Yellow'],
     description: 'Also known as Gloriosa, this vibrant climbing lily is both beautiful and toxic, and is considered endangered in some regions.',

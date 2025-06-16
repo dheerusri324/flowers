@@ -584,7 +584,7 @@ export const flowers: Flower[] = [
     id: 'autumn-beauty-sunflower',
     name: 'Autumn Beauty Sunflower',
     category: 'sunflowers',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://www.applewoodseed.com/wp-content/uploads/2016/11/HAAB-1203.jpg',
     colors: ['Bronze', 'Red', 'Yellow', 'Orange'],
     description: 'Multi-colored sunflowers with autumn hues, producing multiple blooms per plant.',
     care: {

@@ -130,7 +130,7 @@ export const flowers: Flower[] = [
     id: 'yellow-rose',
     name: 'Yellow Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/209004/pexels-photo-209004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     colors: ['Bright Yellow', 'Golden Yellow', 'Lemon Yellow'],
     description: 'Yellow roses symbolize friendship, joy, and warmth, perfect for celebrating friendships and achievements.',
     care: {

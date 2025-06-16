@@ -1282,20 +1282,20 @@ export const flowers: Flower[] = [
   {
     id: 'fire-lily',
     name: 'Fire Lily',
-    category: 'rare',
-    image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    colors: ['Bright Red', 'Orange-Red', 'Yellow edges'],
-    description: 'Spectacular climbing lily with flame-colored petals that seem to dance like fire.',
+    category: 'rare-flowers',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Gloriosa_superba_-_Glory_Lily.jpg',
+    colors: ['Red', 'Orange', 'Yellow'],
+    description: 'Also known as Gloriosa, this vibrant climbing lily is both beautiful and toxic, and is considered endangered in some regions.',
     care: {
       temperature: '70-85°F (21-29°C)',
-      humidity: '60-80%',
-      sunlight: '4-6 hours morning sun, afternoon shade',
-      watering: 'Regular watering, keep roots cool and moist',
-      soil: 'Rich, well-draining, slightly acidic soil',
-      fertilizer: 'Regular feeding with balanced fertilizer'
+      humidity: 'Moderate to High',
+      sunlight: 'Bright indirect light',
+      watering: 'Keep soil moist during growth',
+      soil: 'Loamy, well-draining soil',
+      fertilizer: 'Every 2 weeks during growing season'
     },
-    bloomTime: 'Late summer to fall',
-    difficulty: 'Hard'
+    bloomTime: 'Summer',
+    difficulty: 'Medium'
   },
   {
     id: 'night-blooming-cereus',

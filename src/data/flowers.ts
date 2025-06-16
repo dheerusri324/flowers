@@ -94,7 +94,7 @@ export const flowers: Flower[] = [
     id: 'white-rose',
     name: 'White Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/133464/pexels-photo-133464.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/160916/flower-rose-colorful-petals-160916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     colors: ['Pure White', 'Cream', 'Ivory'],
     description: 'White roses symbolize purity, innocence, and new beginnings, perfect for weddings and celebrations.',
     care: {

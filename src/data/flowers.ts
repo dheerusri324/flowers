@@ -494,7 +494,7 @@ export const flowers: Flower[] = [
     id: 'dwarf-sunflower',
     name: 'Dwarf Sunflower',
     category: 'sunflowers',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://creativefarmer.in/cdn/shop/products/23554_1024x1024_a26c0d9c-9a75-4edc-b0c6-1d85c5bcf9aa.jpg?v=1616308984',
     colors: ['Yellow', 'Orange', 'Red'],
     description: 'Compact sunflowers perfect for containers and small gardens, growing 1-3 feet tall.',
     care: {

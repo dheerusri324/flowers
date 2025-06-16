@@ -548,7 +548,7 @@ export const flowers: Flower[] = [
     id: 'teddy-bear-sunflower',
     name: 'Teddy Bear Sunflower',
     category: 'sunflowers',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://www.allthatgrows.in/cdn/shop/products/Sunflower-Teddy-Bear-First-Slide-2.jpg?v=1680689948',
     colors: ['Golden Yellow'],
     description: 'Fluffy, double-petaled sunflowers that look like golden teddy bears, perfect for children\'s gardens.',
     care: {

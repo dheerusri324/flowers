@@ -512,7 +512,7 @@ export const flowers: Flower[] = [
     id: 'red-sunflower',
     name: 'Red Sunflower',
     category: 'sunflowers',
-    image: 'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1564225112885-ecba29c929e3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     colors: ['Deep Red', 'Burgundy', 'Mahogany'],
     description: 'Striking red sunflowers that add dramatic color and unique beauty to any garden.',
     care: {

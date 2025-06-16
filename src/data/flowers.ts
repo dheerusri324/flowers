@@ -602,7 +602,7 @@ export const flowers: Flower[] = [
     id: 'mammoth-sunflower',
     name: 'Mammoth Sunflower',
     category: 'sunflowers',
-    image: 'https://images.pexels.com/photos/33109/sunflower-sun-summer-yellow.jpg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://m.media-amazon.com/images/I/71WwSYj3r6L._AC_UF1000,1000_QL80_.jpg',
     colors: ['Bright Yellow'],
     description: 'The largest variety of sunflowers, growing up to 15 feet tall with massive flower heads.',
     care: {

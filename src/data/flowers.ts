@@ -566,7 +566,7 @@ export const flowers: Flower[] = [
     id: 'italian-white-sunflower',
     name: 'Italian White Sunflower',
     category: 'sunflowers',
-    image: 'https://www.parkseed.com/products/italian-white-sunflower-seeds-00975-pk-p1',
+    image: 'https://www.superseeds.com/products/italian-white-sunflower',
     colors: ['Cream White', 'Pale Yellow'],
     description: 'Elegant white sunflowers with dark centers, offering a sophisticated alternative to traditional yellow.',
     care: {

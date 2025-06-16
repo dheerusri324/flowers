@@ -112,7 +112,7 @@ export const flowers: Flower[] = [
     id: 'pink-rose',
     name: 'Pink Rose',
     category: 'roses',
-    image: 'https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/736226/pexels-photo-736226.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     colors: ['Light Pink', 'Hot Pink', 'Coral Pink'],
     description: 'Pink roses represent gratitude, grace, and admiration, making them perfect for expressing appreciation.',
     care: {

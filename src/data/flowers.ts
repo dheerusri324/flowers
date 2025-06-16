@@ -301,7 +301,7 @@ export const flowers: Flower[] = [
     id: 'red-tulip',
     name: 'Red Tulip',
     category: 'tulips',
-    image: 'https://images.pexels.com/photos/305854/pexels-photo-305854.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://5.imimg.com/data5/ZR/OO/EA/SELLER-34246236/tulip-flower.jpg',
     colors: ['Bright Red', 'Deep Red', 'Cherry Red'],
     description: 'Bold and vibrant red tulips are perfect for making a dramatic statement in spring gardens.',
     care: {

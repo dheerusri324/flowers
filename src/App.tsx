@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AuthProvider } from './contexts/AuthContext';
 import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
 import CategoryPage from './components/CategoryPage';
@@ -29,30 +30,32 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation 
-        currentView={currentView}
-        onNavigate={handleNavigate}
-        categoryId={selectedCategory}
-      />
-      
-      <main>
-        {currentView === 'home' && (
-          <HomePage onCategorySelect={handleCategorySelect} />
-        )}
+    <AuthProvider>
+      <div className="min-h-screen bg-white">
+        <Navigation 
+          currentView={currentView}
+          onNavigate={handleNavigate}
+          categoryId={selectedCategory}
+        />
         
-        {currentView === 'category' && (
-          <CategoryPage 
-            categoryId={selectedCategory}
-            onFlowerSelect={handleFlowerSelect}
-          />
-        )}
-        
-        {currentView === 'flower' && (
-          <FlowerDetail flowerId={selectedFlower} />
-        )}
-      </main>
-    </div>
+        <main>
+          {currentView === 'home' && (
+            <HomePage onCategorySelect={handleCategorySelect} />
+          )}
+          
+          {currentView === 'category' && (
+            <CategoryPage 
+              categoryId={selectedCategory}
+              onFlowerSelect={handleFlowerSelect}
+            />
+          )}
+          
+          {currentView === 'flower' && (
+            <FlowerDetail flowerId={selectedFlower} />
+          )}
+        </main>
+      </div>
+    </AuthProvider>
   );
 }
 

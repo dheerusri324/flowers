@@ -11,6 +11,8 @@ import {
   Palette,
   Heart
 } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
+import { useFavorites } from '../hooks/useFavorites';
 import AnimatedSection from './AnimatedSection';
 
 interface FlowerDetailProps {
@@ -19,6 +21,8 @@ interface FlowerDetailProps {
 
 const FlowerDetail: React.FC<FlowerDetailProps> = ({ flowerId }) => {
   const flower = flowers.find(f => f.id === flowerId);
+  const { user } = useAuth();
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   if (!flower) {
     return <div>Flower not found</div>;
@@ -43,6 +47,14 @@ const FlowerDetail: React.FC<FlowerDetailProps> = ({ flowerId }) => {
     ));
   };
 
+  const handleFavoriteClick = () => {
+    if (user) {
+      toggleFavorite(flower.id);
+    }
+  };
+
+  const isFlowerFavorite = user ? isFavorite(flower.id) : false;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-rose-50">
       {/* Hero Section */}
@@ -62,7 +74,18 @@ const FlowerDetail: React.FC<FlowerDetailProps> = ({ flowerId }) => {
                   <h1 className="text-4xl md:text-5xl font-bold">
                     {flower.name}
                   </h1>
-                  <Heart className="h-8 w-8 text-rose-300 animate-pulse" />
+                  {user && (
+                    <button
+                      onClick={handleFavoriteClick}
+                      className={`p-2 rounded-full transition-all duration-300 transform hover:scale-110 ${
+                        isFlowerFavorite 
+                          ? 'bg-rose-500 text-white shadow-lg' 
+                          : 'bg-white/20 text-rose-300 hover:bg-white/30'
+                      }`}
+                    >
+                      <Heart className={`h-6 w-6 ${isFlowerFavorite ? 'fill-current' : ''}`} />
+                    </button>
+                  )}
                 </div>
               </AnimatedSection>
               

@@ -1,6 +1,8 @@
 import React from 'react';
 import { flowers, categories } from '../data/flowers';
-import { Eye, Thermometer, Droplets, Sun, Star } from 'lucide-react';
+import { Eye, Thermometer, Droplets, Sun, Star, Heart } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
+import { useFavorites } from '../hooks/useFavorites';
 import AnimatedSection from './AnimatedSection';
 import { useStaggeredAnimation } from '../hooks/useScrollAnimation';
 
@@ -13,6 +15,8 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ categoryId, onFlowerSelect 
   const category = categories.find(c => c.id === categoryId);
   const categoryFlowers = flowers.filter(f => f.category === categoryId);
   const { containerRef, visibleItems } = useStaggeredAnimation(categoryFlowers.length, 100);
+  const { user } = useAuth();
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   if (!category) {
     return <div>Category not found</div>;
@@ -35,6 +39,13 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ categoryId, onFlowerSelect 
         className={`h-4 w-4 transition-colors duration-300 ${i < stars ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
       />
     ));
+  };
+
+  const handleFavoriteClick = (e: React.MouseEvent, flowerId: string) => {
+    e.stopPropagation();
+    if (user) {
+      toggleFavorite(flowerId);
+    }
   };
 
   return (
@@ -108,10 +119,22 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ categoryId, onFlowerSelect 
                     alt={flower.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-4 right-4 flex items-center space-x-2">
                     <div className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${getDifficultyColor(flower.difficulty)} transform hover:scale-110 transition-transform duration-300`}>
                       {flower.difficulty}
                     </div>
+                    {user && (
+                      <button
+                        onClick={(e) => handleFavoriteClick(e, flower.id)}
+                        className={`p-2 rounded-full backdrop-blur-sm transition-all duration-300 transform hover:scale-110 ${
+                          isFavorite(flower.id) 
+                            ? 'bg-rose-500 text-white shadow-lg' 
+                            : 'bg-white/80 text-rose-500 hover:bg-rose-50'
+                        }`}
+                      >
+                        <Heart className={`h-4 w-4 ${isFavorite(flower.id) ? 'fill-current' : ''}`} />
+                      </button>
+                    )}
                   </div>
                   <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                     <div className="flex items-center space-x-1">

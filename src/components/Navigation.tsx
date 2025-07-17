@@ -7,10 +7,11 @@ import AuthModal from './AuthModal';
 interface NavigationProps {
   currentView: 'home' | 'category' | 'flower';
   onNavigate: (view: 'home' | 'category' | 'flower', categoryId?: string) => void;
+  onFlowerSelect: (flowerId: string) => void;
   categoryId?: string;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate, categoryId }) => {
+const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate, onFlowerSelect, categoryId }) => {
   const { user, loading } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
 
@@ -58,7 +59,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onNavigate, catego
               {/* Auth Section */}
               {!loading && (
                 user ? (
-                  <UserAvatar />
+                  <UserAvatar onFlowerSelect={onFlowerSelect} />
                 ) : (
                   <button
                     onClick={() => setShowAuthModal(true)}

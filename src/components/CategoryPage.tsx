@@ -5,6 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useFavorites } from '../hooks/useFavorites';
 import AnimatedSection from './AnimatedSection';
 import { useStaggeredAnimation } from '../hooks/useScrollAnimation';
+import Tooltip from './Tooltip';
 
 interface CategoryPageProps {
   categoryId: string;
@@ -44,7 +45,15 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ categoryId, onFlowerSelect 
   const handleFavoriteClick = (e: React.MouseEvent, flowerId: string) => {
     e.stopPropagation();
     if (user) {
+      const flower = categoryFlowers.find(f => f.id === flowerId);
       toggleFavorite(flowerId);
+      
+      // Add a subtle animation effect
+      const button = e.currentTarget as HTMLButtonElement;
+      button.style.transform = 'scale(1.2)';
+      setTimeout(() => {
+        button.style.transform = 'scale(1)';
+      }, 200);
     }
   };
 
@@ -175,18 +184,24 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ categoryId, onFlowerSelect 
                   
                   {/* Quick Care Info */}
                   <div className="grid grid-cols-3 gap-2 text-xs text-gray-600">
-                    <div className="flex items-center space-x-1 hover:text-red-500 transition-colors duration-300">
-                      <Thermometer className="h-3 w-3 text-red-500" />
-                      <span className="truncate">{flower.care.temperature.split(' ')[0]}</span>
-                    </div>
-                    <div className="flex items-center space-x-1 hover:text-blue-500 transition-colors duration-300">
-                      <Droplets className="h-3 w-3 text-blue-500" />
-                      <span className="truncate">{flower.care.humidity}</span>
-                    </div>
-                    <div className="flex items-center space-x-1 hover:text-yellow-500 transition-colors duration-300">
-                      <Sun className="h-3 w-3 text-yellow-500" />
-                      <span className="truncate">{flower.care.sunlight.split(' ')[0]}h</span>
-                    </div>
+                    <Tooltip content={`Temperature: ${flower.care.temperature}`}>
+                      <div className="flex items-center space-x-1 hover:text-red-500 transition-colors duration-300 cursor-help">
+                        <Thermometer className="h-3 w-3 text-red-500" />
+                        <span className="truncate">{flower.care.temperature.split(' ')[0]}</span>
+                      </div>
+                    </Tooltip>
+                    <Tooltip content={`Humidity: ${flower.care.humidity}`}>
+                      <div className="flex items-center space-x-1 hover:text-blue-500 transition-colors duration-300 cursor-help">
+                        <Droplets className="h-3 w-3 text-blue-500" />
+                        <span className="truncate">{flower.care.humidity}</span>
+                      </div>
+                    </Tooltip>
+                    <Tooltip content={`Sunlight: ${flower.care.sunlight}`}>
+                      <div className="flex items-center space-x-1 hover:text-yellow-500 transition-colors duration-300 cursor-help">
+                        <Sun className="h-3 w-3 text-yellow-500" />
+                        <span className="truncate">{flower.care.sunlight.split(' ')[0]}h</span>
+                      </div>
+                    </Tooltip>
                   </div>
                   
                   <div className="mt-4 pt-4 border-t border-gray-100">

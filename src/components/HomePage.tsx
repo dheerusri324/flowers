@@ -3,12 +3,14 @@ import { categories } from '../data/flowers';
 import { ChevronRight, Flower } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { useStaggeredAnimation } from '../hooks/useScrollAnimation';
+import CountrySearch from './CountrySearch';
 
 interface HomePageProps {
   onCategorySelect: (categoryId: string) => void;
+  onFlowerSelect: (flowerId: string) => void;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ onCategorySelect }) => {
+const HomePage: React.FC<HomePageProps> = ({ onCategorySelect, onFlowerSelect }) => {
   const { containerRef, visibleItems } = useStaggeredAnimation(categories.length, 150);
 
   return (
@@ -129,6 +131,11 @@ const HomePage: React.FC<HomePageProps> = ({ onCategorySelect }) => {
             </div>
           </div>
         </AnimatedSection>
+      </div>
+
+      {/* Country Search Section */}
+      <div className="bg-gradient-to-br from-rose-50 via-white to-green-50">
+        <CountrySearch onFlowerSelect={onFlowerSelect} />
       </div>
     </div>
   );

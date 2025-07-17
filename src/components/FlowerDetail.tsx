@@ -9,11 +9,13 @@ import {
   Star,
   Info,
   Palette,
-  Heart
+  Heart,
+  MapPin
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useFavorites } from '../hooks/useFavorites';
 import AnimatedSection from './AnimatedSection';
+import Tooltip from './Tooltip';
 
 interface FlowerDetailProps {
   flowerId: string;
@@ -96,7 +98,7 @@ const FlowerDetail: React.FC<FlowerDetailProps> = ({ flowerId }) => {
               </AnimatedSection>
               
               <AnimatedSection animation="fadeIn" delay={400}>
-                <div className="flex items-center space-x-6 mb-6">
+                <div className="flex items-center space-x-6 mb-8">
                   <div className={`flex items-center space-x-2 px-4 py-2 rounded-full border backdrop-blur-sm transform hover:scale-105 transition-transform duration-300 ${getDifficultyColor(flower.difficulty)}`}>
                     <span className="font-medium">{flower.difficulty}</span>
                     <div className="flex items-center space-x-1">
@@ -106,6 +108,16 @@ const FlowerDetail: React.FC<FlowerDetailProps> = ({ flowerId }) => {
                   
                   <div className="bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm transform hover:scale-105 transition-transform duration-300">
                     <span className="font-medium">Blooms: {flower.bloomTime}</span>
+                  </div>
+                </div>
+              </AnimatedSection>
+              
+              <AnimatedSection animation="fadeIn" delay={500}>
+                <div className="flex items-center space-x-3 bg-white/20 px-4 py-3 rounded-xl backdrop-blur-sm">
+                  <MapPin className="h-5 w-5 text-white" />
+                  <div>
+                    <span className="text-white/80 text-sm">Origin Country:</span>
+                    <span className="text-white font-semibold ml-2">{flower.country}</span>
                   </div>
                 </div>
               </AnimatedSection>
@@ -163,55 +175,67 @@ const FlowerDetail: React.FC<FlowerDetailProps> = ({ flowerId }) => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-4">
-                    <div className="flex items-start space-x-4 p-4 bg-red-50 rounded-xl border border-red-100 hover:shadow-md hover:scale-105 transition-all duration-300">
-                      <Thermometer className="h-6 w-6 text-red-500 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Temperature</h3>
-                        <p className="text-gray-700">{flower.care.temperature}</p>
+                    <Tooltip content="Optimal temperature range for healthy growth">
+                      <div className="flex items-start space-x-4 p-4 bg-red-50 rounded-xl border border-red-100 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-help">
+                        <Thermometer className="h-6 w-6 text-red-500 mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold text-gray-900 mb-1">Temperature</h3>
+                          <p className="text-gray-700">{flower.care.temperature}</p>
+                        </div>
                       </div>
-                    </div>
+                    </Tooltip>
                     
-                    <div className="flex items-start space-x-4 p-4 bg-blue-50 rounded-xl border border-blue-100 hover:shadow-md hover:scale-105 transition-all duration-300">
-                      <Droplets className="h-6 w-6 text-blue-500 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Humidity</h3>
-                        <p className="text-gray-700">{flower.care.humidity}</p>
+                    <Tooltip content="Humidity level needed for optimal growth">
+                      <div className="flex items-start space-x-4 p-4 bg-blue-50 rounded-xl border border-blue-100 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-help">
+                        <Droplets className="h-6 w-6 text-blue-500 mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold text-gray-900 mb-1">Humidity</h3>
+                          <p className="text-gray-700">{flower.care.humidity}</p>
+                        </div>
                       </div>
-                    </div>
+                    </Tooltip>
                     
-                    <div className="flex items-start space-x-4 p-4 bg-yellow-50 rounded-xl border border-yellow-100 hover:shadow-md hover:scale-105 transition-all duration-300">
-                      <Sun className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Sunlight</h3>
-                        <p className="text-gray-700">{flower.care.sunlight}</p>
+                    <Tooltip content="Daily sunlight requirements for healthy blooming">
+                      <div className="flex items-start space-x-4 p-4 bg-yellow-50 rounded-xl border border-yellow-100 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-help">
+                        <Sun className="h-6 w-6 text-yellow-500 mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold text-gray-900 mb-1">Sunlight</h3>
+                          <p className="text-gray-700">{flower.care.sunlight}</p>
+                        </div>
                       </div>
-                    </div>
+                    </Tooltip>
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="flex items-start space-x-4 p-4 bg-cyan-50 rounded-xl border border-cyan-100 hover:shadow-md hover:scale-105 transition-all duration-300">
-                      <Droplets className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Watering</h3>
-                        <p className="text-gray-700">{flower.care.watering}</p>
+                    <Tooltip content="Watering frequency and method for best results">
+                      <div className="flex items-start space-x-4 p-4 bg-cyan-50 rounded-xl border border-cyan-100 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-help">
+                        <Droplets className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold text-gray-900 mb-1">Watering</h3>
+                          <p className="text-gray-700">{flower.care.watering}</p>
+                        </div>
                       </div>
-                    </div>
+                    </Tooltip>
                     
-                    <div className="flex items-start space-x-4 p-4 bg-amber-50 rounded-xl border border-amber-100 hover:shadow-md hover:scale-105 transition-all duration-300">
-                      <Sprout className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" />
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Soil</h3>
-                        <p className="text-gray-700">{flower.care.soil}</p>
+                    <Tooltip content="Soil type and drainage requirements">
+                      <div className="flex items-start space-x-4 p-4 bg-amber-50 rounded-xl border border-amber-100 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-help">
+                        <Sprout className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold text-gray-900 mb-1">Soil</h3>
+                          <p className="text-gray-700">{flower.care.soil}</p>
+                        </div>
                       </div>
-                    </div>
+                    </Tooltip>
                     
-                    <div className="flex items-start space-x-4 p-4 bg-emerald-50 rounded-xl border border-emerald-100 hover:shadow-md hover:scale-105 transition-all duration-300">
-                      <Sprout className="h-6 w-6 text-emerald-500 mt-1 flex-shrink-0" />
+                    <Tooltip content="Fertilizer type and feeding schedule">
+                      <div className="flex items-start space-x-4 p-4 bg-emerald-50 rounded-xl border border-emerald-100 hover:shadow-md hover:scale-105 transition-all duration-300 cursor-help">
+                        <Sprout className="h-6 w-6 text-emerald-500 mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Fertilizer</h3>
-                        <p className="text-gray-700">{flower.care.fertilizer}</p>
+                          <h3 className="font-semibold text-gray-900 mb-1">Fertilizer</h3>
+                          <p className="text-gray-700">{flower.care.fertilizer}</p>
+                        </div>
                       </div>
-                    </div>
+                    </Tooltip>
                   </div>
                 </div>
               </div>
@@ -232,6 +256,14 @@ const FlowerDetail: React.FC<FlowerDetailProps> = ({ flowerId }) => {
                       <span className="font-medium text-gray-700">Bloom Time</span>
                     </div>
                     <p className="text-gray-900 ml-6">{flower.bloomTime}</p>
+                  </div>
+                  
+                  <div className="hover:bg-green-50 p-2 rounded-lg transition-colors duration-300">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <MapPin className="h-4 w-4 text-green-600" />
+                      <span className="font-medium text-gray-700">Origin</span>
+                    </div>
+                    <p className="text-gray-900 ml-6">{flower.country}</p>
                   </div>
                   
                   <div className="hover:bg-green-50 p-2 rounded-lg transition-colors duration-300">

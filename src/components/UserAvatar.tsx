@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
-import { User, Settings, Heart, LogOut, ChevronDown } from 'lucide-react';
+import { User, Settings, Heart, LogOut, ChevronDown, Flower2 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import ProfileModal from './ProfileModal';
+import FavoritesModal from './FavoritesModal';
 import AnimatedSection from './AnimatedSection';
 
-const UserAvatar: React.FC = () => {
+interface UserAvatarProps {
+  onFlowerSelect: (flowerId: string) => void;
+}
+
+const UserAvatar: React.FC<UserAvatarProps> = ({ onFlowerSelect }) => {
   const { user, profile, signOut } = useAuth();
   const [showDropdown, setShowDropdown] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
+  const [showFavorites, setShowFavorites] = useState(false);
 
   const handleSignOut = async () => {
     await signOut();
@@ -74,7 +80,7 @@ const UserAvatar: React.FC = () => {
 
               <button
                 onClick={() => {
-                  // Navigate to favorites - we'll implement this
+                  setShowFavorites(true);
                   setShowDropdown(false);
                 }}
                 className="w-full flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-rose-50 hover:text-rose-600 transition-colors duration-200"
@@ -100,6 +106,12 @@ const UserAvatar: React.FC = () => {
       <ProfileModal
         isOpen={showProfile}
         onClose={() => setShowProfile(false)}
+      />
+      
+      <FavoritesModal
+        isOpen={showFavorites}
+        onClose={() => setShowFavorites(false)}
+        onFlowerSelect={onFlowerSelect}
       />
     </>
   );

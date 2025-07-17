@@ -35,12 +35,16 @@ function App() {
         <Navigation 
           currentView={currentView}
           onNavigate={handleNavigate}
+          onFlowerSelect={handleFlowerSelect}
           categoryId={selectedCategory}
         />
         
         <main>
           {currentView === 'home' && (
-            <HomePage onCategorySelect={handleCategorySelect} />
+            <HomePage 
+              onCategorySelect={handleCategorySelect}
+              onFlowerSelect={handleFlowerSelect}
+            />
           )}
           
           {currentView === 'category' && (

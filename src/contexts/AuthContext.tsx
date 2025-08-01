@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User, Session } from '@supabase/supabase-js';
-import { supabase, UserProfile } from '../lib/supabase';
+import { supabase, UserProfile, isSupabaseConfigured } from '../lib/supabase';
 
 interface AuthContextType {
   user: User | null;
@@ -31,6 +31,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [loading, setLoading] = useState(true);
 
   const fetchProfile = async (userId: string) => {
+    if (!isSupabaseConfigured()) {
+      console.warn('Supabase not configured. Please set up your environment variables.');
+      return;
+    }
+
     try {
       const { data, error } = await supabase
         .from('user_profiles')

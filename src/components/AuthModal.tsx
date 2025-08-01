@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Mail, Lock, User, AlertCircle, Clock, CheckCircle } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { isSupabaseConfigured } from '../lib/supabase';
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -62,6 +63,15 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'signin' }: A
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Check if Supabase is configured
+    if (!isSupabaseConfigured()) {
+      setError({
+        message: 'Supabase is not configured. Please set up your VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY environment variables.'
+      });
+      return;
+    }
+
     setLoading(true);
     setError('');
     setSuccess('');

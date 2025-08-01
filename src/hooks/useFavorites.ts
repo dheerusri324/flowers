@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { supabase } from '../lib/supabase';
+import { supabase, isSupabaseConfigured } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
 
 export const useFavorites = () => {
@@ -8,7 +8,7 @@ export const useFavorites = () => {
   const [loading, setLoading] = useState(false);
 
   const fetchFavorites = async () => {
-    if (!user) return;
+    if (!user || !isSupabaseConfigured()) return;
 
     setLoading(true);
     try {
